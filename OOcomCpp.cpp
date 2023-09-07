@@ -2,10 +2,31 @@
 //
 
 #include <iostream>
+#include <string>
+
+using namespace std;
+
+struct Conta
+{
+    string numero;
+    string cpfTitular;
+    string nomeTitular;
+    float saldo;
+};
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Conta umaConta;
+    umaConta.numero = "123456";
+    umaConta.cpfTitular = "123456789-10";
+    umaConta.nomeTitular = "Zambon";
+    umaConta.saldo = 100;
+
+    Conta umaOutraConta;
+    umaOutraConta.saldo = 200;
+
+    cout << "Uma conta: " << umaConta.saldo << " Outra Conta: " << umaOutraConta.saldo << endl;
 }
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
