@@ -12,27 +12,28 @@ struct Conta
     string cpfTitular;
     string nomeTitular;
     float saldo;
+
+    void sacar(float valorASacar) {
+        if (valorASacar < 0) {
+            cout << "Ñão pode sacar valor negativo" << endl;
+            return;
+        }
+        if (valorASacar > saldo) {
+            cout << "Saldo insuficiente" << endl;
+            return;
+        }
+        saldo -= valorASacar;
+    }
+
+    void depositar(float ValorADepositar) {
+        if (ValorADepositar < 0) {
+            cout << "Não pode depositar valor negativo" << endl;
+            return;
+        }
+        saldo += ValorADepositar;
+    }
 };
 
-void sacar(Conta& conta, float valorASacar) {
-    if (valorASacar < 0) {
-        cout << "Ñão pode sacar valor negativo" << endl;
-        return;
-    }
-    if (valorASacar > conta.saldo) {
-        cout << "Saldo insuficiente" << endl;
-        return;
-    }
-    conta.saldo -= valorASacar;
-}
-
-void depositar(Conta& conta, float ValorADepositar) {
-    if (ValorADepositar < 0) {
-        cout << "Ñão pode depositar valor negativo" << endl;
-        return;
-    }
-    conta.saldo += ValorADepositar;
-}
 
 int main()
 {
@@ -47,7 +48,11 @@ int main()
 
     cout << "Uma conta: " << umaConta.saldo << " Outra Conta: " << umaOutraConta.saldo << endl;
 
-    depositar(umaOutraConta, 500);
+    umaOutraConta.depositar(500);
+
+    cout << "Uma conta: " << umaConta.saldo << " Outra Conta: " << umaOutraConta.saldo << endl;
+
+    umaOutraConta.sacar(200);
 
     cout << "Uma conta: " << umaConta.saldo << " Outra Conta: " << umaOutraConta.saldo << endl;
 }
