@@ -3,37 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include "Conta.hpp"
 
 using namespace std;
-
-struct Conta
-{
-    string numero;
-    string cpfTitular;
-    string nomeTitular;
-    float saldo;
-
-    void sacar(float valorASacar) {
-        if (valorASacar < 0) {
-            cout << "Ñão pode sacar valor negativo" << endl;
-            return;
-        }
-        if (valorASacar > saldo) {
-            cout << "Saldo insuficiente" << endl;
-            return;
-        }
-        saldo -= valorASacar;
-    }
-
-    void depositar(float ValorADepositar) {
-        if (ValorADepositar < 0) {
-            cout << "Não pode depositar valor negativo" << endl;
-            return;
-        }
-        saldo += ValorADepositar;
-    }
-};
-
 
 int main()
 {
