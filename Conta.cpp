@@ -38,7 +38,8 @@ std::string Conta::recuperaNomeTitular()
     return nomeTitular;
 }
 
-float Conta::recuperaSaldo()
+//const - Significa que este método não pode alterar nenhum atributo da classe.
+float Conta::recuperaSaldo() const
 {
     return saldo;
 }
