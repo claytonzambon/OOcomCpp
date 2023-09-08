@@ -10,13 +10,7 @@ using namespace std;
 int main()
 {
     Conta umaConta;
-    umaConta.numero = "123456";
-    umaConta.cpfTitular = "123456789-10";
-    umaConta.nomeTitular = "Zambon";
-    umaConta.saldo = 100;
-
     Conta umaOutraConta;
-    umaOutraConta.saldo = 200;
 
     cout << "Uma conta: " << umaConta.saldo << " Outra Conta: " << umaOutraConta.saldo << endl;
 
