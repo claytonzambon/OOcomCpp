@@ -10,17 +10,37 @@ using namespace std;
 int main()
 {
     Conta umaConta;
-    Conta umaOutraConta;
+    umaConta.definirNumero("123456");
+    umaConta.definirNomeTitular("Clayton");
+    umaConta.definirCpfTitular("12346789-10");
+    umaConta.depositar(100);
 
-    cout << "Uma conta: " << umaConta.saldo << " Outra Conta: " << umaOutraConta.saldo << endl;
+    cout <<
+        "Dados Uma Conta => Numero: " << umaConta.recuperaNumero() <<
+        " Nome: " << umaConta.recuperaNomeTitular() <<
+        " Cpf: " << umaConta.recuperaCpfTitular() << endl;
+
+    Conta umaOutraConta;
+    umaOutraConta.definirNumero("654321");
+    umaOutraConta.definirNomeTitular("Zambon");
+    umaOutraConta.definirCpfTitular("109876543-21");
+
+    cout <<
+        "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<
+        " Nome: " << umaOutraConta.recuperaNomeTitular() <<
+        " Cpf: " << umaOutraConta.recuperaCpfTitular() << endl;
+
+    cout << endl;
+
+    cout << "Uma conta: " << umaConta.recuperaSaldo() << " Outra Conta: " << umaOutraConta.recuperaSaldo() << endl;
 
     umaOutraConta.depositar(500);
 
-    cout << "Uma conta: " << umaConta.saldo << " Outra Conta: " << umaOutraConta.saldo << endl;
+    cout << "Uma conta: " << umaConta.recuperaSaldo() << " Outra Conta: " << umaOutraConta.recuperaSaldo() << endl;
 
     umaOutraConta.sacar(200);
 
-    cout << "Uma conta: " << umaConta.saldo << " Outra Conta: " << umaOutraConta.saldo << endl;
+    cout << "Uma conta: " << umaConta.recuperaSaldo() << " Outra Conta: " << umaOutraConta.recuperaSaldo() << endl;
 }
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
