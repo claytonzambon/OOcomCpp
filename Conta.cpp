@@ -4,6 +4,7 @@
 //Construtor
 Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular):
     //Initialization List - Melhora a performance em relação a incialização normal
+    //Listas de inicialização evitam a inicialização duplicada de objetos relacionados.
     numero(numero),
     cpfTitular(cpfTitular),
     nomeTitular(nomeTitular),
