@@ -9,14 +9,15 @@ using namespace std;
 
 int main()
 {
-    Conta umaConta("123456", "12346789-10", "Clayton");
+    Conta umaConta("123456", "123.467.890-10", "Clayton");
     umaConta.depositar(100);
+
     cout <<
         "Dados Uma Conta => Numero: " << umaConta.recuperaNumero() <<
         " Nome: " << umaConta.recuperaNomeTitular() <<
         " Cpf: " << umaConta.recuperaCpfTitular() << endl;
 
-    Conta umaOutraConta("654321", "109876543-21", "Zambon");
+    Conta umaOutraConta("654321", "109.876.543-21", "Zambon");
 
     cout <<
         "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<
@@ -34,6 +35,9 @@ int main()
     umaOutraConta.sacar(200);
 
     cout << "Uma conta: " << umaConta.recuperaSaldo() << " Outra Conta: " << umaOutraConta.recuperaSaldo() << endl;
+
+    cout << endl;
+    cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
 }
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração

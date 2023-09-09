@@ -1,6 +1,8 @@
 #include "Conta.hpp"
 #include <iostream>
 
+int Conta::numeroDeContas = 0;
+
 //Construtor
 Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular):
     //Initialization List - Melhora a performance em relação a incialização normal
@@ -10,6 +12,7 @@ Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular
     nomeTitular(nomeTitular),
     saldo(0)
 {
+    numeroDeContas++;
 }
 
 void Conta::sacar(float valorASacar)
@@ -53,4 +56,9 @@ std::string Conta::recuperaNomeTitular()
 float Conta::recuperaSaldo() const
 {
     return saldo;
+}
+
+int Conta::recuperaNumeroDeContas()
+{
+    return numeroDeContas;
 }
