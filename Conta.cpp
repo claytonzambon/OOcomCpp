@@ -18,6 +18,7 @@ Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular
 //Destrutor
 Conta::~Conta()
 {
+    verificaTamanhoDoNome();
     numeroDeContas--;
 }
 
@@ -64,9 +65,14 @@ float Conta::recuperaSaldo() const
     return saldo;
 }
 
-
-
 int Conta::recuperaNumeroDeContas()
 {
     return numeroDeContas;
+}
+
+void Conta::verificaTamanhoDoNome() {
+    if (nomeTitular.size() < 5) {
+        std::cout << "Nome muito curto, menor ou igual a 5." << std::endl;
+        exit(1);
+    }
 }

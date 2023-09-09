@@ -28,5 +28,8 @@ class Conta
         std::string recuperaNomeTitular();
         float recuperaSaldo() const; //const - Significa que este método não pode alterar nenhum atributo da classe.
         //Setters
+
+    private:
+        void verificaTamanhoDoNome();
     
 };
