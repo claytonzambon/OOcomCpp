@@ -15,6 +15,12 @@ Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular
     numeroDeContas++;
 }
 
+//Destrutor
+Conta::~Conta()
+{
+    numeroDeContas--;
+}
+
 void Conta::sacar(float valorASacar)
 {
     if (valorASacar < 0) {
@@ -57,6 +63,8 @@ float Conta::recuperaSaldo() const
 {
     return saldo;
 }
+
+
 
 int Conta::recuperaNumeroDeContas()
 {

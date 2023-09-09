@@ -7,6 +7,13 @@
 
 using namespace std;
 
+void ExibeSaldo(const Conta& conta)
+{
+    Conta umaContaDesnecessaria("333666", "Karine", "111.222.222-55");
+
+    cout << "O saldo da conta eh: " << conta.recuperaSaldo() << endl;
+}
+
 int main()
 {
     Conta umaConta("123456", "123.467.890-10", "Clayton");
@@ -16,6 +23,7 @@ int main()
         "Dados Uma Conta => Numero: " << umaConta.recuperaNumero() <<
         " Nome: " << umaConta.recuperaNomeTitular() <<
         " Cpf: " << umaConta.recuperaCpfTitular() << endl;
+        ExibeSaldo(umaConta);
 
     Conta umaOutraConta("654321", "109.876.543-21", "Zambon");
 
@@ -23,6 +31,7 @@ int main()
         "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<
         " Nome: " << umaOutraConta.recuperaNomeTitular() <<
         " Cpf: " << umaOutraConta.recuperaCpfTitular() << endl;
+    ExibeSaldo(umaOutraConta);
 
     cout << endl;
 
@@ -37,7 +46,7 @@ int main()
     cout << "Uma conta: " << umaConta.recuperaSaldo() << " Outra Conta: " << umaOutraConta.recuperaSaldo() << endl;
 
     cout << endl;
-    cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
+    cout << "Numero de contas: " << Conta::recuperaNumeroDeContas() << endl;
 }
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
