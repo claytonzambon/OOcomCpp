@@ -1,8 +1,9 @@
 #include "Conta.hpp"
 #include <iostream>
 
+//Construtor
 Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular):
-    //Initialization List
+    //Initialization List - Melhora a performance em relação a incialização normal
     numero(numero),
     cpfTitular(cpfTitular),
     nomeTitular(nomeTitular),
