@@ -9,21 +9,14 @@ using namespace std;
 
 int main()
 {
-    Conta umaConta;
-    umaConta.definirNumero("123456");
-    umaConta.definirNomeTitular("Clayton");
-    umaConta.definirCpfTitular("12346789-10");
+    Conta umaConta("123456", "12346789-10", "Clayton");
     umaConta.depositar(100);
-
     cout <<
         "Dados Uma Conta => Numero: " << umaConta.recuperaNumero() <<
         " Nome: " << umaConta.recuperaNomeTitular() <<
         " Cpf: " << umaConta.recuperaCpfTitular() << endl;
 
-    Conta umaOutraConta;
-    umaOutraConta.definirNumero("654321");
-    umaOutraConta.definirNomeTitular("Zambon");
-    umaOutraConta.definirCpfTitular("109876543-21");
+    Conta umaOutraConta("654321", "109876543-21", "Zambon");
 
     cout <<
         "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<

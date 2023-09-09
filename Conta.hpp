@@ -8,10 +8,11 @@ private:
     std::string numero;
     std::string cpfTitular;
     std::string nomeTitular;
-    float saldo = 0;
+    float saldo;
 
 //Métodos
 public:
+    Conta(std::string numero, std::string cpfTitular, std::string nomeTitular);
     void sacar(float valorASacar);
     void depositar(float valorADepositar);
     //Getters
@@ -20,7 +21,5 @@ public:
     std::string recuperaNomeTitular();
     float recuperaSaldo() const; //const - Significa que este método não pode alterar nenhum atributo da classe.
     //Setters
-    void definirNumero(std::string numero);
-    void definirCpfTitular(std::string cpfTitular);
-    void definirNomeTitular(std::string nomeTitular);
+    
 };
