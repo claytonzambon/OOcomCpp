@@ -1,12 +1,13 @@
 #include "Conta.hpp"
 #include <iostream>
 
-Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular)
+Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular):
+    //Initialization List
+    numero(numero),
+    cpfTitular(cpfTitular),
+    nomeTitular(nomeTitular),
+    saldo(0)
 {
-    this->numero = numero;
-    this->cpfTitular = cpfTitular;
-    this->nomeTitular = nomeTitular;
-    this->saldo = 0;
 }
 
 void Conta::sacar(float valorASacar)
