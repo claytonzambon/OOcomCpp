@@ -4,33 +4,39 @@
 #include <iostream>
 #include <string>
 #include "Conta.hpp"
+#include "Titular.hpp"
 
 using namespace std;
 
 void ExibeSaldo(const Conta& conta)
 {
-    Conta umaContaDesnecessaria("333666", "Karine", "111.222.222-55");
+    Conta umaContaDesnecessaria("333666", Titular("111.222.222-55", "Karine"));
 
     cout << "O saldo da conta eh: " << conta.recuperaSaldo() << endl;
 }
 
 int main()
 {
-    Conta umaConta("123456", "123.467.890-10", "Clayton");
+    Conta umaConta("123456", Titular("Clayton", "123.467.890-10"));
     umaConta.depositar(100);
 
+    /*
     cout <<
         "Dados Uma Conta => Numero: " << umaConta.recuperaNumero() <<
         " Nome: " << umaConta.recuperaNomeTitular() <<
         " Cpf: " << umaConta.recuperaCpfTitular() << endl;
-        ExibeSaldo(umaConta);
+    */
+    
+    ExibeSaldo(umaConta);
 
-    Conta umaOutraConta("654321", "109.876.543-21", "Zambon");
+    Conta umaOutraConta("654321", Titular("Zambon", "109.876.543-21"));
 
+    /*
     cout <<
         "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<
         " Nome: " << umaOutraConta.recuperaNomeTitular() <<
         " Cpf: " << umaOutraConta.recuperaCpfTitular() << endl;
+    */
     ExibeSaldo(umaOutraConta);
 
     cout << endl;

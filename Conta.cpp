@@ -4,12 +4,11 @@
 int Conta::numeroDeContas = 0;
 
 //Construtor
-Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular):
+Conta::Conta(std::string numero, Titular titular) :
     //Initialization List - Melhora a performance em relação a incialização normal
     //Listas de inicialização evitam a inicialização duplicada de objetos relacionados.
     numero(numero),
-    cpfTitular(cpfTitular),
-    nomeTitular(nomeTitular),
+    titular(titular),
     saldo(0)
 {
     numeroDeContas++;
@@ -18,7 +17,6 @@ Conta::Conta(std::string numero, std::string cpfTitular, std::string nomeTitular
 //Destrutor
 Conta::~Conta()
 {
-    verificaTamanhoDoNome();
     numeroDeContas--;
 }
 
@@ -49,16 +47,6 @@ std::string Conta::recuperaNumero()
     return numero;
 }
 
-std::string Conta::recuperaCpfTitular()
-{
-    return cpfTitular;
-}
-
-std::string Conta::recuperaNomeTitular()
-{
-    return nomeTitular;
-}
-
 //const - Significa que este método não pode alterar nenhum atributo da classe.
 float Conta::recuperaSaldo() const
 {
@@ -68,11 +56,4 @@ float Conta::recuperaSaldo() const
 int Conta::recuperaNumeroDeContas()
 {
     return numeroDeContas;
-}
-
-void Conta::verificaTamanhoDoNome() {
-    if (nomeTitular.size() < 5) {
-        std::cout << "Nome muito curto, menor ou igual a 5." << std::endl;
-        exit(1);
-    }
 }

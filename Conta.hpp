@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "Titular.hpp"
 
 class Conta
 {
@@ -12,24 +13,18 @@ class Conta
 
     private:
         std::string numero;
-        std::string cpfTitular;
-        std::string nomeTitular;
+        Titular titular;
         float saldo;
 
     //Métodos
     public:
-        Conta(std::string numero, std::string cpfTitular, std::string nomeTitular);
+        Conta(std::string numero, Titular titular);
         ~Conta(); //Método destrutor
         void sacar(float valorASacar);
         void depositar(float valorADepositar);
         //Getters
         std::string recuperaNumero();
-        std::string recuperaCpfTitular();
-        std::string recuperaNomeTitular();
         float recuperaSaldo() const; //const - Significa que este método não pode alterar nenhum atributo da classe.
+        
         //Setters
-
-    private:
-        void verificaTamanhoDoNome();
-    
 };
