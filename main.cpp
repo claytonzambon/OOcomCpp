@@ -11,15 +11,15 @@ using namespace std;
 
 void ExibeSaldo(const Conta& conta)
 {
-    Titular titular(string("111.222.222-55"), "Karine");
-    Conta umaContaDesnecessaria("333666", titular);
+    ;
+    Conta umaContaDesnecessaria("333666", Titular(Cpf("111.222.222-55"), "Karine"));
 
     cout << "O saldo da conta eh: " << conta.recuperaSaldo() << endl;
 }
 
 int main()
 {
-    Conta umaConta("123456", Titular(string("123.467.890-10"), "Clayton"));
+    Conta umaConta("123456", Titular(Cpf("123.467.890-10"), "Clayton"));
     umaConta.depositar(100);
 
     /*
@@ -31,7 +31,7 @@ int main()
     
     ExibeSaldo(umaConta);
 
-    Conta umaOutraConta("654321", Titular(string("109.876.543-21"), "Zambon"));
+    Conta umaOutraConta("654321", Titular(Cpf("109.876.543-21"), "Zambon"));
 
     /*
     cout <<
