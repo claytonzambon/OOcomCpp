@@ -60,6 +60,8 @@ int main()
     cout << "Numero de contas: " << Conta::recuperaNumeroDeContas() << endl;
 
     Funcionario funcionario(Cpf("123.456.789-10"), "Chaves", 3000.00);
+
+    cout << "Nome Funcionario: " << funcionario.recuperaNome() << endl;
     return 0;
 }
 

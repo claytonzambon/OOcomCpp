@@ -5,14 +5,14 @@
 class Pessoa
 {
 //Atributos
-private:
+protected:
 	Cpf cpf;
 	std::string nome;
 
+//Metodos
 public:
 	Pessoa(Cpf cpf, std::string nome);
 
-//Metodos
 private:
 	void verificaTamanhoDoNome();
 };
