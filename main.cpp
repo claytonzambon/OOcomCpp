@@ -6,20 +6,22 @@
 #include "Conta.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
+#include "Funcionario.hpp"
 
 using namespace std;
 
 void ExibeSaldo(const Conta& conta)
 {
-    ;
-    Conta umaContaDesnecessaria("333666", Titular(Cpf("111.222.222-55"), "Karine"));
+    Titular titular(Cpf("111.222.222-55"), "Karine");
+    Conta umaContaDesnecessaria("333666", titular);
 
     cout << "O saldo da conta eh: " << conta.recuperaSaldo() << endl;
 }
 
 int main()
 {
-    Conta umaConta("123456", Titular(Cpf("123.467.890-10"), "Clayton"));
+    Titular titular(Cpf("123.467.890-10"), "Clayton");
+    Conta umaConta("123456", titular);
     umaConta.depositar(100);
 
     /*
@@ -31,7 +33,8 @@ int main()
     
     ExibeSaldo(umaConta);
 
-    Conta umaOutraConta("654321", Titular(Cpf("109.876.543-21"), "Zambon"));
+    Titular outroTitular(Cpf("109.876.543-21"), "Zambon");
+    Conta umaOutraConta("654321", outroTitular);
 
     /*
     cout <<
@@ -55,6 +58,9 @@ int main()
 
     cout << endl;
     cout << "Numero de contas: " << Conta::recuperaNumeroDeContas() << endl;
+
+    Funcionario funcionario(Cpf("123.456.789-10"), "Chaves", 3000.00);
+    return 0;
 }
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
