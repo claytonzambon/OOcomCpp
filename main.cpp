@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Conta.hpp"
+#include "ContaPoupanca.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
 #include "Funcionario.hpp"
@@ -13,16 +14,22 @@ using namespace std;
 void ExibeSaldo(const Conta& conta)
 {
     Titular titular(Cpf("111.222.222-55"), "Karine");
-    Conta umaContaDesnecessaria("333666", titular, 2);
+    Conta umaContaDesnecessaria("333666", titular);
 
     cout << "O saldo da conta eh: " << conta.recuperaSaldo() << endl;
+}
+
+void RealizaSaque(Conta& conta)
+{
+    conta.sacar(200);
 }
 
 int main()
 {
     Titular titular(Cpf("123.467.890-10"), "Clayton");
-    Conta umaConta("123456", titular, 2);
+    Conta umaConta("123456", titular);
     umaConta.depositar(100);
+    RealizaSaque(umaConta);
 
     //cout <<
     //    "Dados Uma Conta => Numero: " << umaConta.recuperaNumero() <<
@@ -32,7 +39,7 @@ int main()
     ExibeSaldo(umaConta);
 
     Titular outroTitular(Cpf("109.876.543-21"), "Zambon");
-    Conta umaOutraConta("654321", outroTitular, 2);
+    ContaPoupanca umaOutraConta("654321", outroTitular);
 
     //cout <<
     //    "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<

@@ -4,13 +4,12 @@
 int Conta::numeroDeContas = 0;
 
 //Construtor
-Conta::Conta(std::string numero, Titular titular, short int tipoConta) :
+Conta::Conta(std::string numero, Titular titular) :
     //Initialization List - Melhora a performance em relação a incialização normal
     //Listas de inicialização evitam a inicialização duplicada de objetos relacionados.
     numero(numero),
     titular(titular),
-    saldo(0),
-    tipoConta(tipoConta)
+    saldo(0)
 {
     numeroDeContas++;
 }
@@ -28,15 +27,7 @@ void Conta::sacar(float valorASacar)
         return;
     }
 
-    float taxa;
-    if (tipoConta == 1) {
-        taxa = 0.05;
-    }
-    if (tipoConta == 2) {
-        taxa = 0.03;
-    }
-
-    float tarifaDeSaque = valorASacar * taxa;
+    float tarifaDeSaque = valorASacar * 0.05;
     float valorDoSaque = valorASacar + tarifaDeSaque;
 
     if (valorDoSaque > saldo) {
