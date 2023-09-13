@@ -4,9 +4,9 @@
 class Cpf
 {
 private:
-	std::string numero;
+    std::string numero;
 public:
-	Cpf(std::string numero);
-	std::string recuperaNumero();
+    explicit Cpf(std::string numero);
+    std::string recuperaNumero() const;
 };
 
