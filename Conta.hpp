@@ -15,10 +15,13 @@ class Conta
         std::string numero;
         Titular titular;
         float saldo;
+        
+        /** 1 = Conta Corrente e 2 = Conta Poupanca */
+        short int tipoConta;
 
     //Métodos
     public:
-        Conta(std::string numero, Titular titular);
+        Conta(std::string numero, Titular titular, short int tipoConta);
         ~Conta(); //Método destrutor
         void sacar(float valorASacar);
         void depositar(float valorADepositar);

@@ -13,7 +13,7 @@ using namespace std;
 void ExibeSaldo(const Conta& conta)
 {
     Titular titular(Cpf("111.222.222-55"), "Karine");
-    Conta umaContaDesnecessaria("333666", titular);
+    Conta umaContaDesnecessaria("333666", titular, 2);
 
     cout << "O saldo da conta eh: " << conta.recuperaSaldo() << endl;
 }
@@ -21,7 +21,7 @@ void ExibeSaldo(const Conta& conta)
 int main()
 {
     Titular titular(Cpf("123.467.890-10"), "Clayton");
-    Conta umaConta("123456", titular);
+    Conta umaConta("123456", titular, 2);
     umaConta.depositar(100);
 
     //cout <<
@@ -32,7 +32,7 @@ int main()
     ExibeSaldo(umaConta);
 
     Titular outroTitular(Cpf("109.876.543-21"), "Zambon");
-    Conta umaOutraConta("654321", outroTitular);
+    Conta umaOutraConta("654321", outroTitular, 2);
 
     //cout <<
     //    "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<
