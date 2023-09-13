@@ -24,24 +24,21 @@ int main()
     Conta umaConta("123456", titular);
     umaConta.depositar(100);
 
-    /*
-    cout <<
-        "Dados Uma Conta => Numero: " << umaConta.recuperaNumero() <<
-        " Nome: " << umaConta.recuperaNomeTitular() <<
-        " Cpf: " << umaConta.recuperaCpfTitular() << endl;
-    */
+    //cout <<
+    //    "Dados Uma Conta => Numero: " << umaConta.recuperaNumero() <<
+    //    " Nome: " << umaConta.recuperaNomeTitular() <<
+    //    " Cpf: " << umaConta.recuperaCpfTitular() << endl;
     
     ExibeSaldo(umaConta);
 
     Titular outroTitular(Cpf("109.876.543-21"), "Zambon");
     Conta umaOutraConta("654321", outroTitular);
 
-    /*
-    cout <<
-        "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<
-        " Nome: " << umaOutraConta.recuperaNomeTitular() <<
-        " Cpf: " << umaOutraConta.recuperaCpfTitular() << endl;
-    */
+    //cout <<
+    //    "Dados Outra Conta => Numero: " << umaOutraConta.recuperaNumero() <<
+    //    " Nome: " << umaOutraConta.recuperaNomeTitular() <<
+    //    " Cpf: " << umaOutraConta.recuperaCpfTitular() << endl;
+ 
     ExibeSaldo(umaOutraConta);
 
     cout << endl;
@@ -58,6 +55,7 @@ int main()
 
     cout << endl;
     cout << "Numero de contas: " << Conta::recuperaNumeroDeContas() << endl;
+
 
     Funcionario funcionario(Cpf("123.456.789-10"), "Chaves", 3000.00);
 
