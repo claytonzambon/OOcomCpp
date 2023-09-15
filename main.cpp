@@ -22,12 +22,8 @@ int main()
 {
     Titular titular(Cpf("123.456.789-10"), "Vinicius");
   
-    //ContaPoupanca umaConta("123456", titular);
-    Conta* umaConta = new ContaPoupanca("123456", titular);
-    delete umaConta;
-
-    return 0;
-    /*
+    ContaPoupanca umaConta("123456", titular);
+    
     umaConta.depositar(500);
     RealizaSaque(umaConta);
 
@@ -47,5 +43,4 @@ int main()
     cout << "Nome do funcionario: " << funcionario.recuperaNome() << endl;
 
     return 0;
-    */
 }
