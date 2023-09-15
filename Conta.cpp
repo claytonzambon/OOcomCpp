@@ -18,10 +18,10 @@ Conta::~Conta()
 
 void Conta::sacar(float valorASacar)
 {
-    std::cout << "Chamando método sacar da conta corrente" << std::endl;
+    std::cout << "Chamando metodo sacar da conta corrente" << std::endl;
     
     if (valorASacar < 0) {
-        std::cout << "Não pode sacar valor negativo" << std::endl;
+        std::cout << "Nao pode sacar valor negativo" << std::endl;
         return;
     }
 

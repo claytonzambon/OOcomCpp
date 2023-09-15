@@ -11,8 +11,10 @@ ContaPoupanca::ContaPoupanca(std::string numero, Titular titular) :
 
 void ContaPoupanca::sacar(float valorASacar)
 {
+    std::cout << "Chamando metodo sacar da conta Poupanca" << std::endl;
+
     if (valorASacar < 0) {
-        std::cout << "Ñão pode sacar valor negativo" << std::endl;
+        std::cout << "Nao pode sacar valor negativo" << std::endl;
         return;
     }
 

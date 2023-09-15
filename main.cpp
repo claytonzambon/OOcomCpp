@@ -10,7 +10,7 @@ using namespace std;
 
 void ExibeSaldo(const Conta& conta)
 {
-    cout << "O saldo da conta é: " << conta.recuperaSaldo() << endl;
+    cout << "O saldo da conta e: " << conta.recuperaSaldo() << endl;
 }
 
 void RealizaSaque(Conta& conta)
@@ -35,11 +35,11 @@ int main()
 
     ExibeSaldo(umaOutraConta);
 
-    cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
+    cout << "Numero de contas: " << Conta::recuperaNumeroDeContas() << endl;
 
     Funcionario funcionario(Cpf("123.456.789-10"), "Dias Vinicius", 1000);
     
-    cout << "Nome do funcionário: " << funcionario.recuperaNome() << endl;
+    cout << "Nome do funcionario: " << funcionario.recuperaNome() << endl;
 
     return 0;
 }
