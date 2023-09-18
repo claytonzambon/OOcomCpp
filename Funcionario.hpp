@@ -12,6 +12,8 @@ private:
 //Metodos
 public:
 	Funcionario(Cpf cpf, std::string nome, float salario);
-	std::string recuperaNome();
+	std::string recuperaNome() const;
+	float recuperaSalario() const;
+	virtual float bonificação() const = 0;
 };
 
