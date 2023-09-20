@@ -7,6 +7,7 @@
 #include "Cpf.hpp"
 #include "Funcionario.hpp"
 #include "Gerente.hpp"
+#include "DiaDaSemana.hpp"
 
 using namespace std;
 
@@ -57,7 +58,7 @@ int main()
 
     cout << "Numero de contas: " << Conta::recuperaNumeroDeContas() << endl;
 
-    Gerente umGerente(Cpf("123.456.789-00"), "Zambon", 1500, 2, "123456");
+    Gerente umGerente(Cpf("123.456.789-00"), "Zambon", 1500, Terca, "123456");
 
     return 0;
 }
