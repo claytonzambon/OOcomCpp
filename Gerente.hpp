@@ -7,7 +7,7 @@ class Gerente final :
     public Autenticavel
 {
 public:
-    Gerente(Cpf cpf, std::string nome, float salario, std::string senha);
+    Gerente(Cpf cpf, std::string nome, float salario, short int diaDoPagamento, std::string senha);
     float bonificação() const;
 };
 

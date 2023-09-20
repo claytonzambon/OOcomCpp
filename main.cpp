@@ -6,6 +6,7 @@
 #include "Titular.hpp"
 #include "Cpf.hpp"
 #include "Funcionario.hpp"
+#include "Gerente.hpp"
 
 using namespace std;
 
@@ -55,6 +56,8 @@ int main()
     ExibeSaldo(outraContaCorrente);
 
     cout << "Numero de contas: " << Conta::recuperaNumeroDeContas() << endl;
+
+    Gerente umGerente(Cpf("123.456.789-00"), "Zambon", 1500, 2, "123456");
 
     return 0;
 }
