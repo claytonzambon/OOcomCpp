@@ -19,3 +19,8 @@ void ContaCorrente::tranferePara(Conta& destino, float valor)
     sacar(valor);
     destino.depositar(valor);
 }
+
+void ContaCorrente::operator+=(ContaCorrente& contaOrigem)
+{
+    contaOrigem.tranferePara(*this, contaOrigem.recuperaSaldo() / 2);
+}
