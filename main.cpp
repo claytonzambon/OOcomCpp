@@ -18,7 +18,7 @@ void ExibeSaldo(const Conta& conta)
 
 void RealizaSaque(Conta& conta)
 {
-    conta.sacar(200);
+    cout << "Novo saldo da conta: " << conta.sacar(200) << endl;
 }
 
 void FazLogin(Autenticavel& alguem, string senha)
