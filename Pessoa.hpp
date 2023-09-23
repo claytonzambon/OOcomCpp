@@ -12,6 +12,7 @@ protected:
 //Metodos
 public:
 	Pessoa(Cpf cpf, std::string nome);
+	std::string recuperaNome() const;
 
 private:
 	void verificaTamanhoDoNome();
