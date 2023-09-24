@@ -5,7 +5,7 @@
 #include "Cpf.hpp"
 
 class Titular : 
-    public Pessoa, 
+    public Pessoa<Cpf>, 
     public Autenticavel
 {
 public:

@@ -4,7 +4,7 @@
 #include "Pessoa.hpp"
 #include "DiaDaSemana.hpp"
 
-class Funcionario : public Pessoa
+class Funcionario : public Pessoa<Cpf>
 {
 //Atributos
 private:
