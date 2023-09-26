@@ -130,7 +130,6 @@
   <ItemGroup>
     <ClCompile Include="Autenticavel.cpp" />
     <ClCompile Include="Caixa.cpp" />
-    <ClCompile Include="Conta.cpp" />
     <ClCompile Include="ContaCorrente.cpp" />
     <ClCompile Include="ContaPoupanca.cpp" />
     <ClCompile Include="Cpf.cpp" />

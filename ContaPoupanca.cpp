@@ -8,10 +8,3 @@ ContaPoupanca::ContaPoupanca(std::string numero, Titular titular) :
 {
 
 }
-
-float ContaPoupanca::taxaDeSaque() const
-{
-    std::cout << "Chamando metodo sacar da conta Poupanca" << std::endl;
-
-    return 0.03;
-}
